@@ -389,29 +389,29 @@
 						<div class="row">
                             <div class="col-md-12">
                                 <div class="box">
-                                    <div class="videoBx">
-                                        <video src="DSPROMARKETING.mp4" style=" width: 100%; height: auto"></video>
+                                    <div class="videoBx video">
+                                        <video src="DSPROMARKETING.mp4" style=" width: 100%; height: auto" loop preload="none"></video>
                                     </div>
                                 </div>
 							</div>
                             <div class="col-md-12">
                                 <div class="box">
-                                    <div class="videoBx">
-                                        <video src="DSPROSHIP.mp4" style=" width: 100%; height: auto; float: right"></video>
+                                    <div class="videoBx video">
+                                        <video src="DSPROSHIP.mp4" style=" width: 100%; height: auto; float: right" loop preload="none"></video>
                                     </div>
                                 </div>
 							</div>
 							<div class="col-md-12">
                                 <div class="box">
-                                    <div class="videoBx">
-                                        <video src="PHONE.mp4" style=" width: 100%; height: auto"></video>
+                                    <div class="videoBx video">
+                                        <video src="PHONE.mp4" style=" width: 100%; height: auto" loop preload="none"></video>
                                     </div>
                                 </div>
 							</div>
 							<div class="col-md-12">
                                 <div class="box">
-                                    <div class="videoBx">
-                                        <video src="DSPROTRADING.mp4" style=" width: 100%; height: auto; float: right"></video>
+                                    <div class="videoBx video">
+                                        <video src="DSPROTRADING.mp4" style=" width: 100%; height: auto; float: right" loop preload="none"></video>
                                     </div>
                                 </div>
 							</div>
@@ -930,17 +930,14 @@
 		}
 		</script>
 		<script type="text/javascript">
-            document.addEventListener('mouseover', hoverVideo, false);
-            var vid=document.getElementsByTagName("video");
-            [].forEach.call(vid, function(item){
-                item.addEventListener('mouseover', hoverVideo, false);
-                item.addEventListener('mouseout', hideVideo, false);
-            });
-            function hoverVideo(e){
-                this.play()
+            var figure = $(".video").hover( hoverVideo, hideVideo );
+
+            function hoverVideo(e) {  
+                $('video', this).get(0).play(); 
             }
-            function hideVideo(e){
-                this.pause()
+
+            function hideVideo(e) {
+                $('video', this).get(0).pause(); 
             }
         </script>
 	</body>

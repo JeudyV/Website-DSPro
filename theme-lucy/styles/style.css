@@ -4801,3 +4801,8 @@ html {
     height: auto;
     object-fit: cover;
 }
+
+/* Hide Play button + controls on iOS */
+video::-webkit-media-controls {
+    display:none !important;
+}
