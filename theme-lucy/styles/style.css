@@ -4802,7 +4802,51 @@ html {
     object-fit: cover;
 }
 
+.home-lucy .head_text{
+    font-size: 74px;
+}
+
 /* Hide Play button + controls on iOS */
 video::-webkit-media-controls {
     display:none !important;
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+    .box{
+        height: 200px;
+    }
+    .home-lucy .head_text{
+        font-size: 34px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .box{
+        height: 250px;
+    }
+    .home-lucy .head_text{
+        font-size: 44px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .box{
+        height: 350px;
+    }
+    .home-lucy .head_text{
+        font-size: 54px;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .box{
+        height: 450px;
+    }
+    .home-lucy .head_text{
+        font-size: 64px;
+    }
 }
